@@ -1,0 +1,46 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Cat{
+	static int Count;
+	string Pruklad2;
+public:
+	static int GetCount();
+	static int GetMemory();
+	
+	Cat();
+	~Cat();
+};
+
+int Cat::Count = 0;
+int Cat::GetCount(){
+	return Count;
+}
+
+int Cat::GetMemory(){
+	return Count * sizeof(Cat);
+}
+
+
+Cat::Cat(){
+	Count++;
+}
+
+Cat::~Cat(){
+	Count--;
+}
+
+
+int main()
+{
+	setlocale(LC_ALL, "RU");
+	Cat a,b,c;
+	 cout << "Count: " << Cat::GetCount() << endl;
+    cout << Cat::GetMemory()<<" byte" << endl;
+	system("pause");
+	return 0;
+}
+
+
