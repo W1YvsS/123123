@@ -35,10 +35,9 @@ Cat::~Cat(){
 
 int main()
 {
-	setlocale(LC_ALL, "RU");
 	Cat a,b,c;
-	 cout << "Count: " << Cat::GetCount() << endl;
-    cout << Cat::GetMemory()<<" byte" << endl;
+	cout << "Count: " << Cat::GetCount() << endl;
+    	cout << Cat::GetMemory()<<" byte" << endl;
 	system("pause");
 	return 0;
 }
